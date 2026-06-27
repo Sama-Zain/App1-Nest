@@ -6,8 +6,7 @@ import { UpdateAuthDto } from './dto/update-auth.dto';
 export class AuthService {
   constructor() {}
   create(createAuthDto: CreateAuthDto) {
-    console.log(createAuthDto);
-    return 'This action adds a new auth';
+      return createAuthDto;
   }
 
   findAll() {

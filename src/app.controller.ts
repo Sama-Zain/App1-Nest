@@ -10,6 +10,8 @@ import {
 } from '@nestjs/common';
 import { AppService } from './app.service';
 import { ConfigService } from '@nestjs/config';
+import { CreateAuthDto } from './auth/dto/create-auth.dto';
+import { AuthService } from './auth/auth.service';
 export class CreateCatDto {
   userId: number;
   name: string;
@@ -57,4 +59,5 @@ export class AppController {
     const port = this.configService.get<number>('PORT');
     return `Server is running on port: ${port}`;
   }
+  
 }

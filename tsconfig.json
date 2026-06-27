@@ -4,6 +4,7 @@
     "module": "nodenext",
     "noUnusedLocals": false,
     "moduleResolution": "nodenext",
+    "strictPropertyInitialization": false,
     "resolvePackageJsonExports": true,
     "esModuleInterop": true,
     "isolatedModules": true,

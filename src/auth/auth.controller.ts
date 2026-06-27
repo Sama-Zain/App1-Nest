@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  ValidationPipe,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateAuthDto } from './dto/create-auth.dto';
@@ -34,4 +35,8 @@ export class AuthController {
   remove(@Param('id') id: string) {
     return this.authService.remove(+id);
   }
+  @Post('register')
+    register(@Body(new ValidationPipe()) createauthdto: CreateAuthDto) {
+      return { status:'Succes', data: this.authService.create(createauthdto) };
+    }
 }
